@@ -76,6 +76,17 @@ echo ^<pre^> >> %export%
 php %vendor%\squizlabs\php_codesniffer\bin\phpcs -s --standard=PSR2 --report=summary %srcfull% >> %export% 2>null
 echo ^</pre^> >> %export%
 
+echo ------------------------------------
+echo --Processing PHP CopyPasteDetector--
+echo ------------------------------------
+echo .
+echo %vendor%\sebastian\phpcpd\phpcpd %srcfull%
+echo .
+echo ^<h1^>PHP CopyPasteDetector^</h1^> >> %export%
+echo ^<pre^> >> %export%
+php %vendor%\sebastian\phpcpd\phpcpd %srcfull% >> %export% 2>null
+echo ^</pre^> >> %export%
+
 echo "------------------------------"
 echo "-Processing  PHP MessDetector-"
 echo "------------------------------"
