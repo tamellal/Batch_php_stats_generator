@@ -61,7 +61,7 @@ echo ------------------------------
 echo .
 echo %vendor%\phpmetrics\phpmetrics\bin\phpmetrics --report-html=%outfull%\phpmetrics.html %srcfull%
 echo .
-php %vendor%\phpmetrics\phpmetrics\bin\phpmetrics --report-html=%outfull%\phpmetrics.html %srcfull% 2>null
+php %vendor%\phpmetrics\phpmetrics\bin\phpmetrics --report-html=%outfull%\phpmetrics.html %srcfull%
 echo ^<h1^>PHP Metrics^</h1^> >> %export%
 echo ^<a href="/%out%/phpmetrics.html"^>PHP Metrics results^</a^> >> %export%
 
@@ -73,7 +73,7 @@ echo %vendor%\squizlabs\php_codesniffer\bin\phpcs -s --standard=PSR2 --report=su
 echo .
 echo ^<h1^>PHP CodeSniffer^</h1^> >> %export%
 echo ^<pre^> >> %export%
-php %vendor%\squizlabs\php_codesniffer\bin\phpcs -s --standard=PSR2 --report=summary %srcfull% >> %export% 2>null
+php %vendor%\squizlabs\php_codesniffer\bin\phpcs -s --standard=PSR2 --report=summary %srcfull% >> %export%
 echo ^</pre^> >> %export%
 
 echo ------------------------------------
@@ -84,7 +84,7 @@ echo %vendor%\sebastian\phpcpd\phpcpd %srcfull%
 echo .
 echo ^<h1^>PHP CopyPasteDetector^</h1^> >> %export%
 echo ^<pre^> >> %export%
-php %vendor%\sebastian\phpcpd\phpcpd %srcfull% >> %export% 2>null
+php %vendor%\sebastian\phpcpd\phpcpd %srcfull% >> %export%
 echo ^</pre^> >> %export%
 
 echo "------------------------------"
@@ -95,7 +95,7 @@ echo php %vendor%\phpmd\phpmd\src\bin\phpmd %srcfull% text cleancode,codesize,co
 echo .
 echo ^<h1^>PHP MessDetector^</h1^> >> %export%
 echo ^<pre^> >> %export%
-php %vendor%\phpmd\phpmd\src\bin\phpmd %srcfull% text cleancode,codesize,controversial,design,naming,unusedcode >> %export% 2>null
+php %vendor%\phpmd\phpmd\src\bin\phpmd %srcfull% text cleancode,codesize,controversial,design,naming,unusedcode >> %export%
 echo ^</pre^> >> %export%
 
 echo "------------------------------"
@@ -105,7 +105,7 @@ echo .
 echo php %vendor%\pdepend\pdepend\src\bin\pdepend --summary-xml=%outfull%\summary.xml --jdepend-chart=%outfull%\jdepend.svg --overview-pyramid=%outfull%\pyramid.svg %srcfull%
 echo .
 echo ^<h1^>PHP Depend^</h1^> >> %export%
-php %vendor%\pdepend\pdepend\src\bin\pdepend --summary-xml=%outfull%\summary.xml --jdepend-chart=%outfull%\jdepend.svg --overview-pyramid=%outfull%\pyramid.svg %srcfull% 2>null
+php %vendor%\pdepend\pdepend\src\bin\pdepend --summary-xml=%outfull%\summary.xml --jdepend-chart=%outfull%\jdepend.svg --overview-pyramid=%outfull%\pyramid.svg %srcfull%
 echo ^<h2^>Depend^</h2^> >> %export%
 echo ^<img src="/%out%/jdepend.svg"/^> >> %export%
 echo ^<h2^>Pyramid^</h2^> >> %export%
